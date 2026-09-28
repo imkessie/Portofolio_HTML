@@ -1,0 +1,122 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+:root {
+    --bg-main: #ffffff;
+    --bg-alt: #f8f9fa;
+    --text-primary: #1a1a1a;
+    --text-muted: #636e72;
+    --border-color: #dee2e6;
+    --accent: #007bff;
+}
+
+body.dark-mode {
+    --bg-main: #121212;
+    --bg-alt: #1e1e1e;
+    --text-primary: #f8f9fa;
+    --text-muted: #adb5bd;
+    --border-color: #333333;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    transition: 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+section {
+    padding: 100px 0;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+#mainNav {
+    padding: 15px 0;
+    transition: 0.3s;
+}
+
+#mainNav.bg-white {
+    background-color: var(--bg-main) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    color: var(--text-primary) !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--accent) !important;
+}
+
+#themeToggle {
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    background: transparent;
+    border-radius: 8px;
+}
+
+#themeToggle:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: white;
+    transform: scale(1.1);
+}
+
+.project-card {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+}
+
+.project-card h5, .project-card p {
+    color: inherit;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-color: var(--accent);
+}
+
+.profile-img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+}
+
+.custom-text-muted {
+    color: var(--text-muted);
+}
+
+.custom-bg-alt {
+    background-color: var(--bg-alt);
+}
+
+.custom-form-bg {
+    background-color: var(--bg-main);
+    border-color: var(--border-color);
+}
+
+.form-control {
+    background-color: transparent;
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+#typewriter {
+    border-right: 3px solid var(--accent);
+    padding-right: 5px;
+    animation: blinker 0.7s infinite;
+}
+
+@keyframes blinker {
+    50% { border-color: transparent; }
+}
